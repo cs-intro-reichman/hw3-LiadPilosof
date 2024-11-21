@@ -24,7 +24,7 @@ public class LoanCalc {
 		// System.out.println((int) bisectionSolver(loan, rate, n, epsilon));
 		// System.out.println("number of iterations: " + iterationCounter);
 
-		System.out.println((int)bruteForceSolver(100000, 1.05, 10, epsilon));
+		System.out.println(bruteForceSolver(10000, 1.05, 10, epsilon));
 
 		
 	}
@@ -43,14 +43,13 @@ public class LoanCalc {
 	// Given: the sum of the loan, the periodical interest rate (as a percentage),
 	// the number of periods (n), and epsilon, the approximation's accuracy
 	// Side effect: modifies the class variable iterationCounter.
-    public static double bruteForceSolver(double loan, double rate, int n, double epsilon) {
+    public static int bruteForceSolver(double loan, double rate, int n, double epsilon) {
 		double g = loan/n;
 
 		while (endBalance(loan, rate, n, g)>0) {
 			iterationCounter++;
 			g += epsilon;
 			}
-			System.out.println(g);
 			
 		return (int)g;
     }

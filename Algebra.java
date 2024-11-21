@@ -191,7 +191,8 @@ public class Algebra {
 			if (times==x||times>x) {
 				System.out.println(times);
 				if (times>x) {
-					return i--;
+					i--;
+					return i;
 				}
 				return i;
 			}
