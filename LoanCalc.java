@@ -50,7 +50,7 @@ public class LoanCalc {
 			}
 			System.out.println(g);
 			
-		return g;
+		return (int)g;
     }
     
     // Uses bisection search to compute an approximation of the periodical payment 
